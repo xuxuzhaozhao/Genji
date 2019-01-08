@@ -35,7 +35,7 @@
         </v-card-actions>
       </v-card>
     </v-navigation-drawer>
-    <v-toolbar color="cyan darken-4" dark fixed app clipped-right>
+    <v-toolbar color="red darken-4" dark fixed app clipped-right>
       <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
       <v-layout column>
         <v-container class="selectContainer">
@@ -121,7 +121,7 @@
         </v-layout>
       </v-container>
     </v-content>
-    <v-footer color="cyan darken-4" class="white--text" app>
+    <v-footer color="red darken-4" class="white--text" app>
       <span>&nbsp;&nbsp;xuxuzhaozhao</span>
       <v-spacer></v-spacer>
       <span>&copy; 2015 - 2018&nbsp;&nbsp;</span>
