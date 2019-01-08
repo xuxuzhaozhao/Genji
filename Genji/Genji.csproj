@@ -1,0 +1,66 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile></DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="VuePack\**" />
+    <Content Remove="VuePack\**" />
+    <EmbeddedResource Remove="VuePack\**" />
+    <None Remove="VuePack\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dapper" Version="1.50.4" />
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Cors" Version="2.0.1" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.4" />
+    <PackageReference Include="MySql.Data" Version="6.10.6" />
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.1" />
+    <PackageReference Include="Plupload" Version="2.1.1" />
+    <PackageReference Include="Qiniu.NetCore" Version="1.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\favicon.ico" />
+    <None Include="wwwroot\Json\bootstrap.min.js" />
+    <None Include="wwwroot\Json\hm.js" />
+    <None Include="wwwroot\Json\jquery.json.js" />
+    <None Include="wwwroot\Json\jquery.json2xml.js" />
+    <None Include="wwwroot\Json\jquery.message.js" />
+    <None Include="wwwroot\Json\jquery.min.js" />
+    <None Include="wwwroot\Json\jquery.numberedtextarea.js" />
+    <None Include="wwwroot\Json\jquery.xml2json.js" />
+    <None Include="wwwroot\Json\json2.js" />
+    <None Include="wwwroot\Json\jsonlint.js" />
+    <None Include="wwwroot\static\css\reset.scss" />
+    <None Include="wwwroot\static\fonts\fontawesome-webfont.svg" />
+    <None Include="wwwroot\static\fonts\fontawesome-webfont.woff2" />
+    <None Include="wwwroot\static\js\0.1e00ab98e9ba2b4c5cc0.js" />
+    <None Include="wwwroot\static\js\0.1e00ab98e9ba2b4c5cc0.js.map" />
+    <None Include="wwwroot\static\js\highlight.min.js" />
+    <None Include="wwwroot\static\js\manifest.bd546c8d400ab966e04f.js" />
+    <None Include="wwwroot\static\js\manifest.bd546c8d400ab966e04f.js.map" />
+    <None Include="wwwroot\static\js\rangeFn.js" />
+    <None Include="wwwroot\static\js\vendor.f1103b83516ac5abbb40.js" />
+    <None Include="wwwroot\static\js\vendor.f1103b83516ac5abbb40.js.map" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Genji.Data\Genji.Data.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="QiniuTest\" />
+  </ItemGroup>
+
+</Project>

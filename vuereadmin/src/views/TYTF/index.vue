@@ -1,0 +1,236 @@
+<template>
+    <v-app light>
+        <v-toolbar class="white">
+            <v-toolbar-title v-text="title"></v-toolbar-title>
+        </v-toolbar>
+        <v-content>
+            <section>
+                <v-parallax :src="src.main1" height="600">
+                    <v-layout column
+                              align-center
+                              justify-center
+                              class="white--text">
+                        <img :src="src.logo" alt="Vuetify.js" height="200">
+                        <h1 class="white--text mb-2 display-1 text-xs-center">田园天府</h1>
+                        <div class="subheading mb-3 text-xs-center">YOU WORTHY IT</div>
+                        <v-btn class="blue lighten-2 mt-5"
+                               dark
+                               large
+                               @click="menuMenu">
+                            看一哈我们的菜单
+                        </v-btn>
+                    </v-layout>
+                </v-parallax>
+            </section>
+
+            <section>
+                <v-layout column
+                          wrap
+                          class="my-5"
+                          align-center>
+                    <v-flex xs12 sm4 class="my-3">
+                        <div class="text-xs-center">
+                            <h2 class="headline">介绍几个特色菜</h2>
+                            <span class="subheading">
+                                哦哟，想都没有想过，这里东西这么好吃
+                            </span>
+                        </div>
+                    </v-flex>
+                    <v-flex xs12>
+                        <v-container grid-list-xl>
+                            <v-layout row wrap align-center>
+                                <v-flex xs12 md4>
+                                    <v-card class="elevation-0 transparent">
+                                        <v-card-text class="text-xs-center">
+                                            <v-icon x-large class="blue--text text--lighten-2">color_lens</v-icon>
+                                        </v-card-text>
+                                        <v-card-title primary-title class="layout justify-center">
+                                            <div class="headline text-xs-center">点杀活鱼！咦~</div>
+                                        </v-card-title>
+                                        <v-card-text>
+                                            我跟你们说，必须要喊老板给你们安排个点杀花鲢。鱼头拿来做剁椒鱼头,鱼身拿来做酸菜鱼、水煮鱼。怎么形容呢?<br><br>
+                                            <strong>文化人说：世间情动，不过盛夏白瓷酸菜鱼，碎冰碰壁叮当响。</strong><br>
+                                            <strong>我说：卧槽！太求好吃了！！！！</strong>
+                                        </v-card-text>
+                                    </v-card>
+                                </v-flex>
+                                <v-flex xs12 md4>
+                                    <v-card class="elevation-0 transparent">
+                                        <v-card-text class="text-xs-center">
+                                            <v-icon x-large class="blue--text text--lighten-2">flash_on</v-icon>
+                                        </v-card-text>
+                                        <v-card-title primary-title class="layout justify-center">
+                                            <div class="headline">纯正烤全咩~</div>
+                                        </v-card-title>
+                                        <v-card-text>
+                                            烤全羊就比较讲究了，怎么个讲究法呢？首先，你！得！打！电！话！预！订！ <br>
+                                            因为我们得联系附近团结山上专门散养羊子的老人家，提前给我们拿下来，再准备杀！它！再使用我们的秘制酱料腌！制！它！<br><br>
+                                            <strong>那吃上一口，黑龙滩你就没白来！绝对不豁你！</strong>
+                                        </v-card-text>
+                                    </v-card>
+                                </v-flex>
+                                <v-flex xs12 md4>
+                                    <v-card class="elevation-0 transparent">
+                                        <v-card-text class="text-xs-center">
+                                            <v-icon x-large class="blue--text text--lighten-2">build</v-icon>
+                                        </v-card-text>
+                                        <v-card-title primary-title class="layout justify-center">
+                                            <div class="headline text-xs-center">回锅肉！！！</div>
+                                        </v-card-title>
+                                        <v-card-text>
+                                            撒子呢？？就推荐个回锅肉啊！？<br>
+                                            哦！你以为，哪儿的回锅肉都有这儿巴适满？真的，一盘田园天府牌回锅肉就能让人吃三碗饭！<br>
+                                            <strong>（旁白：怪不得长那么胖！）</strong><br>
+                                            <strong>（与！你！求！事！）</strong>
+                                        </v-card-text>
+                                    </v-card>
+                                </v-flex>
+                            </v-layout>
+                        </v-container>
+                    </v-flex>
+                </v-layout>
+            </section>
+
+            <section>
+                <v-parallax :src="src.main2" height="380">
+                    <v-layout column align-center justify-center>
+                        <div class="headline white--text mb-3 text-xs-center">哦哟，还可以玩</div>
+                        <em>你以为吃完饭就没有活动了吗</em>
+                        <v-btn class="blue lighten-2 mt-5"
+                               dark
+                               large
+                               @click="menuPlay">
+                            好玩的地方
+                        </v-btn>
+                    </v-layout>
+                </v-parallax>
+            </section>
+
+            <section>
+                <v-container grid-list-xl>
+                    <v-layout row wrap justify-center class="my-5">
+                        <v-flex xs12 sm4>
+                            <v-card class="elevation-0 transparent">
+                                <v-card-title primary-title class="layout justify-center">
+                                    <div class="headline">关于田园天府</div>
+                                </v-card-title>
+                                <v-card-text>
+                                    黑龙滩一路到头的农家餐饮店，只有这家店的菜才算得上是真正的美味，店里环境很好服务周到又在湿地公园内，是个非常不错的度假休闲胜地！
+                                </v-card-text>
+                            </v-card>
+                        </v-flex>
+                        <v-flex xs12 sm4 offset-sm1>
+                            <v-card class="elevation-0 transparent">
+                                <v-card-title primary-title class="layout justify-center">
+                                    <div class="headline">联系我们</div>
+                                </v-card-title>
+                                <v-card-text>
+                                    每逢佳节人有点多，美味不等人。想早点吃饭，然后疯狂HAPPY吗？那就给疯狂给我们打电话了咯！
+                                </v-card-text>
+                                <v-list class="transparent">
+                                    <v-list-tile>
+                                        <v-list-tile-action>
+                                            <v-icon class="blue--text text--lighten-2">phone</v-icon>
+                                        </v-list-tile-action>
+                                        <v-list-tile-content>
+                                            <v-list-tile-title>
+                                                139-9033-9009
+                                                <v-icon class="red--text">favorite</v-icon>
+                                                徐女士
+                                            </v-list-tile-title>
+                                        </v-list-tile-content>
+                                    </v-list-tile>
+                                    <v-list-tile @click.stop="goTYTF">
+                                        <v-list-tile-action>
+                                            <v-icon class="blue--text text--lighten-2">place</v-icon>
+                                        </v-list-tile-action>
+                                        <v-list-tile-content>
+                                            <v-list-tile-title>田园天府</v-list-tile-title>
+                                        </v-list-tile-content>
+                                    </v-list-tile>
+                                    <v-list-tile>
+                                        <v-list-tile-action>
+                                            <v-icon class="blue--text text--lighten-2">email</v-icon>
+                                        </v-list-tile-action>
+                                        <v-list-tile-content>
+                                            <v-list-tile-title>xuhong@hotmail.com</v-list-tile-title>
+                                        </v-list-tile-content>
+                                    </v-list-tile>
+                                </v-list>
+                            </v-card>
+                        </v-flex>
+                    </v-layout>
+                </v-container>
+            </section>
+
+            <v-footer class="blue darken-2">
+                <v-layout row wrap align-center>
+                    <v-flex xs12>
+                        <div class="white--text ml-3">
+                            Made with
+                            <v-icon class="red--text">favorite</v-icon>
+                            by <a class="white--text" href="/" target="_blank">xuxuzhaozhao</a>
+                        </div>
+                    </v-flex>
+                </v-layout>
+            </v-footer>
+        </v-content>
+
+        <!-- 菜单 -->
+        <x-menu :menuShow="menuShow"
+                @menuHide="menuHide"
+                :isMenu="isMenu">
+        </x-menu>
+
+    </v-app>
+</template>
+
+<script>
+import XMenu from "./menu";
+export default {
+  components: {
+    XMenu
+  },
+  data() {
+    return {
+      title: "TYTF",
+      menuShow: false,
+      isMenu: true,
+      src: {}
+    };
+  },
+  created() {
+    document.getElementsByTagName('html')[0].style.overflowY = 'scroll';
+    document.title = "田园天府";
+    this.mainImage();
+  },
+  methods: {
+    menuMenu() {
+      this.isMenu = true;
+      this.menuShow = true;
+    },
+    menuPlay() {
+      this.isMenu = false;
+      this.menuShow = true;
+    },
+    goTYTF() {
+      window.open("https://www.amap.com/place/B0FFGXMG72");
+    },
+    menuHide() {
+      this.menuShow = false;
+    },
+    mainImage() {
+      this.$http.get(`${this.$domain}/api/TYTF/head`).then(res => {
+        console.log(res.data.data)
+        this.src = res.data.data;
+      });
+    }
+  }
+};
+</script>
+
+<style scoped>
+/* html {
+  overflow-y: scroll;
+} */
+</style>
